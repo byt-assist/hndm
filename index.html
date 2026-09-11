@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HNDM — Modern Fashion | BYT Ecosystem</title>
-    <meta name="description" content="HNDM — modern fashion for those who value simplicity, quality, and freedom. Discover the new season collection.">
+    <meta name="description" content="HNDM — modern fashion for those who value simplicity, quality, and freedom. HNDM Token — Hash Network Data Mapper.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -16,17 +16,11 @@
         
         /* HEADER */
         .header {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background: transparent;
-            transition: all 0.3s ease;
-            color: #FFFFFF;
+            position: fixed; top: 0; left: 0;
+            width: 100%; padding: 20px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; background: transparent;
+            transition: all 0.3s ease; color: #FFFFFF;
         }
         .header.scrolled {
             background: rgba(255, 255, 255, 0.98);
@@ -43,24 +37,43 @@
         .logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
         .header.scrolled .logo img { filter: none; }
         
-        .nav a { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-left: 32px; opacity: 0.85; transition: opacity 0.3s; font-weight: 500; }
+        .nav a { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-left: 28px; opacity: 0.85; transition: opacity 0.3s; font-weight: 500; }
         .nav a:hover { opacity: 1; }
         .header-controls { display: flex; align-items: center; gap: 16px; }
-        .lang-select { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 8px 12px; border-radius: 0; font-size: 11px; cursor: pointer; letter-spacing: 1px; }
+        .lang-select { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: #FFFFFF; padding: 8px 12px; font-size: 11px; cursor: pointer; letter-spacing: 1px; }
         .lang-select option { background: #000000; color: #FFFFFF; }
-        .wallet-btn { background: transparent; border: 1px solid #FFFFFF; color: #FFFFFF; padding: 10px 24px; border-radius: 0; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 2px; }
+        .wallet-btn { background: transparent; border: 1px solid #FFFFFF; color: #FFFFFF; padding: 10px 24px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 2px; }
         .wallet-btn:hover { background: #FFFFFF; color: #000000; }
         
         /* HERO */
         .hero { height: 100vh; display: flex; align-items: flex-end; justify-content: flex-start; position: relative; overflow: hidden; background: #000000; }
         .hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover; z-index: 0; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%); z-index: 1; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%); z-index: 1; }
         .hero-content { position: relative; z-index: 2; padding: 0 0 100px 80px; color: #FFFFFF; max-width: 700px; }
         .hero-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.9; margin-bottom: 16px; font-weight: 500; }
         .hero-title { font-size: 72px; font-weight: 300; line-height: 1.05; margin-bottom: 24px; letter-spacing: -1px; }
         .hero-subtitle { font-size: 15px; font-weight: 300; letter-spacing: 1px; opacity: 0.85; margin-bottom: 36px; max-width: 500px; }
         .hero-btn { display: inline-block; background: #FFFFFF; color: #000000; padding: 16px 40px; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; transition: all 0.3s ease; }
         .hero-btn:hover { background: #000000; color: #FFFFFF; outline: 1px solid #FFFFFF; }
+        
+        /* HERO TOKEN STRIP */
+        .hero-token-strip {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 20px 80px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 40px;
+            align-items: center;
+            z-index: 3;
+        }
+        .hero-token-strip .item { text-align: left; }
+        .hero-token-strip .item .value { font-size: 22px; font-weight: 400; color: #FFFFFF; letter-spacing: 0.5px; }
+        .hero-token-strip .item .label { font-size: 10px; text-transform: uppercase; letter-spacing: 3px; opacity: 0.5; margin-top: 6px; color: #FFFFFF; }
+        .hero-token-strip .item a { display: inline-block; padding: 10px 24px; background: #FFFFFF; color: #000000; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s; }
+        .hero-token-strip .item a:hover { opacity: 0.85; }
         
         /* SECTIONS */
         .section-header { display: flex; justify-content: space-between; align-items: baseline; padding: 60px 0 30px; border-bottom: 1px solid #EAEAEA; margin-bottom: 40px; }
@@ -142,6 +155,28 @@
         .contract-row a { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: #FFFFFF; border-bottom: 1px solid #FFFFFF; padding-bottom: 2px; text-align: center; transition: opacity 0.3s; }
         .contract-row a:hover { opacity: 0.6; }
         
+        /* HOW TO BUY */
+        .how-to-buy { padding: 100px 0; background: #F5F5F0; }
+        .buy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 40px; }
+        .buy-step { background: #FFFFFF; padding: 40px 30px; text-align: left; transition: all 0.3s; }
+        .buy-step:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .buy-step .num { font-size: 40px; font-weight: 300; opacity: 0.2; margin-bottom: 16px; }
+        .buy-step h3 { font-size: 18px; font-weight: 500; margin-bottom: 12px; letter-spacing: -0.3px; }
+        .buy-step p { font-size: 13px; line-height: 1.8; opacity: 0.6; }
+        
+        /* SWAP */
+        .swap-section { padding: 100px 0; background: #000000; color: #FFFFFF; }
+        .swap-section .section-header { border-bottom-color: #1A1A1A; }
+        .swap-section .section-title { color: #FFFFFF; }
+        .swap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+        .swap-card { background: rgba(255,255,255,0.05); padding: 30px 24px; text-align: center; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.08); }
+        .swap-card:hover { background: rgba(255,255,255,0.1); border-color: #FFFFFF; }
+        .swap-card .dex-icon { font-size: 32px; margin-bottom: 16px; }
+        .swap-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: #FFFFFF; }
+        .swap-card p { font-size: 12px; opacity: 0.5; margin-bottom: 20px; }
+        .swap-card a { display: inline-block; padding: 10px 24px; background: #FFFFFF; color: #000000; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s; }
+        .swap-card a:hover { opacity: 0.85; }
+        
         /* COUNTER */
         .counter-section { padding: 60px 0; background: #000000; color: #FFFFFF; }
         .counter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 900px; margin: 0 auto; text-align: center; }
@@ -171,9 +206,14 @@
         .footer-disclaimer { font-size: 10px; opacity: 0.35; text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #EAEAEA; letter-spacing: 0.5px; line-height: 1.7; }
         
         /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .hero-token-strip { padding: 16px 40px; gap: 20px; }
+            .hero-token-strip .item .value { font-size: 18px; }
+        }
         @media (max-width: 992px) {
             .hero-title { font-size: 48px; }
-            .hero-content { padding: 0 0 60px 40px; }
+            .hero-content { padding: 0 0 140px 40px; }
+            .hero-token-strip { grid-template-columns: repeat(3, 1fr); padding: 16px 40px; gap: 16px; }
             .collection-grid { grid-template-columns: 1fr 1fr; }
             .collection-card img { height: 500px; }
             .lookbook-grid { grid-template-columns: 1fr; }
@@ -184,14 +224,18 @@
             .token-grid { grid-template-columns: 1fr; }
             .data-grid { grid-template-columns: 1fr 1fr; }
             .contract-row { grid-template-columns: 1fr; text-align: center; }
+            .buy-grid { grid-template-columns: 1fr 1fr; }
+            .swap-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
             .container { padding: 0 20px; }
             .header { padding: 16px 20px; flex-wrap: wrap; gap: 10px; }
             .nav { display: none; }
             .hero-title { font-size: 36px; }
-            .hero-content { padding: 0 0 40px 20px; }
+            .hero-content { padding: 0 0 200px 20px; }
             .hero-subtitle { font-size: 13px; }
+            .hero-token-strip { grid-template-columns: 1fr 1fr; padding: 16px 20px; gap: 16px; }
+            .hero-token-strip .item .value { font-size: 16px; }
             .collection-grid { grid-template-columns: 1fr; }
             .collection-card img { height: 450px; }
             .campaign-overlay h2 { font-size: 36px; padding: 0 20px; }
@@ -201,6 +245,8 @@
             .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
             .data-grid { grid-template-columns: 1fr; }
             .data-value { font-size: 40px; }
+            .buy-grid { grid-template-columns: 1fr; }
+            .swap-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -212,9 +258,9 @@
         <nav class="nav">
             <a href="#collection" data-i18n="nav_collection">Collection</a>
             <a href="#lookbook" data-i18n="nav_lookbook">Lookbook</a>
-            <a href="#atelier" data-i18n="nav_atelier">Atelier</a>
             <a href="#token" data-i18n="nav_token">Token</a>
             <a href="collection.html" data-i18n="nav_shop">Shop</a>
+            <a href="fintech.html" data-i18n="nav_fintech">Fintech</a>
             <a href="editorial.html" data-i18n="nav_editorial">Editorial</a>
         </nav>
         <div class="header-controls">
@@ -230,7 +276,7 @@
                 <option value="ja">日本語</option>
                 <option value="ar">العربية</option>
             </select>
-            <button class="wallet-btn" id="connectWallet" data-i18n="wallet_btn">Shop Now</button>
+            <button class="wallet-btn" id="connectWallet" data-i18n="wallet_btn">Buy HNDM</button>
         </div>
     </header>
 
@@ -245,6 +291,28 @@
             <h1 class="hero-title" data-i18n="hero_title">The New Season.<br>Redefined.</h1>
             <p class="hero-subtitle" data-i18n="hero_subtitle">Modern silhouettes, natural textures, and timeless design. Discover the collection that moves with you.</p>
             <a href="#collection" class="hero-btn" data-i18n="hero_btn">Explore Collection</a>
+        </div>
+        <!-- HERO TOKEN STRIP -->
+        <div class="hero-token-strip">
+            <div class="item">
+                <div class="value">$1.00</div>
+                <div class="label" data-i18n="data_price">HNDM Price</div>
+            </div>
+            <div class="item">
+                <div class="value">$10B</div>
+                <div class="label" data-i18n="data_fdv">Market Cap</div>
+            </div>
+            <div class="item">
+                <div class="value">9</div>
+                <div class="label" data-i18n="data_holders">Holders</div>
+            </div>
+            <div class="item">
+                <div class="value">$299M</div>
+                <div class="label" data-i18n="data_liquidity">Liquidity</div>
+            </div>
+            <div class="item">
+                <a href="fintech.html" data-i18n="hero_buy">Buy HNDM →</a>
+            </div>
         </div>
     </section>
 
@@ -406,6 +474,74 @@
         </div>
     </section>
 
+    <!-- HOW TO BUY -->
+    <section class="how-to-buy">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="buy_title">How to Buy HNDM</h2>
+                <a href="fintech.html" class="section-link" data-i18n="buy_link">Open Fintech</a>
+            </div>
+            <div class="buy-grid">
+                <div class="buy-step">
+                    <div class="num">01</div>
+                    <h3 data-i18n="buy_step1_title">Install Wallet</h3>
+                    <p data-i18n="buy_step1_desc">Download Phantom or Backpack wallet for Solana. Store your SOL and USDT safely.</p>
+                </div>
+                <div class="buy-step">
+                    <div class="num">02</div>
+                    <h3 data-i18n="buy_step2_title">Fund Your Wallet</h3>
+                    <p data-i18n="buy_step2_desc">Buy SOL or USDT on any exchange and send to your wallet address.</p>
+                </div>
+                <div class="buy-step">
+                    <div class="num">03</div>
+                    <h3 data-i18n="buy_step3_title">Swap for HNDM</h3>
+                    <p data-i18n="buy_step3_desc">Connect to Jupiter, Meteora, or OpenSea. Paste contract address and swap USDT for HNDM.</p>
+                </div>
+                <div class="buy-step">
+                    <div class="num">04</div>
+                    <h3 data-i18n="buy_step4_title">Stake & Earn</h3>
+                    <p data-i18n="buy_step4_desc">Stake HNDM to earn BYT rewards, unlock premium tiers, and gain governance rights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SWAP -->
+    <section class="swap-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="swap_title">Swap & Trade HNDM</h2>
+                <a href="fintech.html" class="section-link" data-i18n="swap_link">More Options</a>
+            </div>
+            <div class="swap-grid">
+                <div class="swap-card">
+                    <div class="dex-icon">🪐</div>
+                    <h3>Jupiter</h3>
+                    <p data-i18n="swap_jup">Best rates aggregator</p>
+                    <a href="https://jup.ag/tokens/9gidDr1GxQ1DqMwsT5nSgrmSFVZy1mtZjZ45w2TB4nJ8" target="_blank">Swap →</a>
+                </div>
+                <div class="swap-card">
+                    <div class="dex-icon">🌀</div>
+                    <h3>Meteora</h3>
+                    <p data-i18n="swap_met">Liquidity pool DAMM V2</p>
+                    <a href="https://www.geckoterminal.com/solana/pools/8J6te5ErQP5pLWBWhaiyEe8STp7JUjrytvpQwLxfE97A" target="_blank">Open →</a>
+                </div>
+                <div class="swap-card">
+                    <div class="dex-icon">🌊</div>
+                    <h3>OpenSea</h3>
+                    <p data-i18n="swap_os">Buy & swap any token</p>
+                    <a href="https://opensea.io/token/solana/G3AkC2gat2h7iVhGXc4F9B7PJr1oJfL7BWhWD9pSFAzg" target="_blank">Trade →</a>
+                </div>
+                <div class="swap-card">
+                    <div class="dex-icon">🦄</div>
+                    <h3>Uniswap</h3>
+                    <p data-i18n="swap_uni">Cross-chain trading</p>
+                    <a href="https://app.uniswap.org/explore/tokens/solana/G3AkC2gat2h7iVhGXc4F9B7PJr1oJfL7BWhWD9pSFAzg" target="_blank">Trade →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- COUNTER -->
     <section class="counter-section">
         <div class="container">
@@ -429,12 +565,14 @@
         <div class="ticker-content">
             <span class="ticker-item">✦ New Season <span>2026</span></span>
             <span class="ticker-item">✦ Sustainable Materials</span>
+            <span class="ticker-item">✦ HNDM Token <span>$1.00</span></span>
             <span class="ticker-item">✦ Free Shipping <span>over $50</span></span>
-            <span class="ticker-item">✦ HNDM Token <span>Live</span></span>
+            <span class="ticker-item">✦ HNDM Token <span>Live on Solana</span></span>
             <span class="ticker-item">✦ New Season <span>2026</span></span>
             <span class="ticker-item">✦ Sustainable Materials</span>
+            <span class="ticker-item">✦ HNDM Token <span>$1.00</span></span>
             <span class="ticker-item">✦ Free Shipping <span>over $50</span></span>
-            <span class="ticker-item">✦ HNDM Token <span>Live</span></span>
+            <span class="ticker-item">✦ HNDM Token <span>Live on Solana</span></span>
         </div>
     </div>
 
@@ -460,7 +598,6 @@
                         <li><a href="#atelier" data-i18n="footer_atelier">Atelier</a></li>
                         <li><a href="#token" data-i18n="footer_token">Token</a></li>
                         <li><a href="editorial.html" data-i18n="footer_editorial">Editorial</a></li>
-                        <li><a href="#store" data-i18n="footer_stores">Stores</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -468,7 +605,7 @@
                     <ul>
                         <li><a href="https://t.me/hndm" target="_blank">Telegram</a></li>
                         <li><a href="#" target="_blank">Instagram</a></li>
-                        <li><a href="#" target="_blank">Newsletter</a></li>
+                        <li><a href="fintech.html">Fintech</a></li>
                     </ul>
                 </div>
             </div>
@@ -486,12 +623,13 @@
     <script>
         const translations = {
             en: {
-                nav_collection: 'Collection', nav_lookbook: 'Lookbook', nav_atelier: 'Atelier', nav_token: 'Token', nav_shop: 'Shop', nav_editorial: 'Editorial',
-                wallet_btn: 'Shop Now',
+                nav_collection: 'Collection', nav_lookbook: 'Lookbook', nav_token: 'Token', nav_shop: 'Shop', nav_fintech: 'Fintech', nav_editorial: 'Editorial',
+                wallet_btn: 'Buy HNDM',
                 hero_label: 'Fall — Winter 2026',
                 hero_title: 'The New Season.<br>Redefined.',
                 hero_subtitle: 'Modern silhouettes, natural textures, and timeless design. Discover the collection that moves with you.',
                 hero_btn: 'Explore Collection',
+                hero_buy: 'Buy HNDM →',
                 collection_title: 'The Collection', collection_link: 'View All',
                 col_outerwear: 'Outerwear', col_outerwear_desc: 'Coats, jackets & trenches',
                 col_knitwear: 'Knitwear', col_knitwear_desc: 'Sweaters & cardigans',
@@ -503,8 +641,7 @@
                 atelier_label: 'The Atelier', atelier_title: 'Crafted with<br>Intention',
                 atelier_desc_1: 'Every stitch, every seam, every detail — considered. Our atelier blends traditional craftsmanship with modern precision.',
                 atelier_desc_2: 'We work with natural fibres, sustainable materials, and a commitment to quality that outlasts trends.',
-                store_label: 'Visit Us', store_title: 'Flagship<br>Stores',
-                store_desc: 'Experience the collection in person at our flagship locations.',
+                store_label: 'Visit Us', store_title: 'Flagship<br>Stores', store_desc: 'Experience the collection in person at our flagship locations.',
                 token_title: 'The Token', token_link: 'Token Data',
                 token_util_title: 'Access & Ownership',
                 token_util_desc: 'HNDM unlocks exclusive drops, early access to collections, and voting rights on future campaigns. A token that belongs in the wardrobe.',
@@ -513,21 +650,29 @@
                 token_gov_title: 'Shape the House',
                 token_gov_desc: 'Vote on collection direction, collaborations, and store openings. HNDM holders shape the future of the brand.',
                 data_title: 'Token Data', data_link: 'Back to Token',
-                data_price: 'Token Price', data_fdv: 'Fully Diluted Value', data_holders: 'Holders', data_liquidity: 'Liquidity',
+                data_price: 'Token Price', data_fdv: 'Market Cap', data_holders: 'Holders', data_liquidity: 'Liquidity',
                 data_contract: 'Contract Address', data_pool: 'View Pool', data_opensea: 'View on OpenSea',
+                buy_title: 'How to Buy HNDM', buy_link: 'Open Fintech',
+                buy_step1_title: 'Install Wallet', buy_step1_desc: 'Download Phantom or Backpack wallet for Solana. Store your SOL and USDT safely.',
+                buy_step2_title: 'Fund Your Wallet', buy_step2_desc: 'Buy SOL or USDT on any exchange and send to your wallet address.',
+                buy_step3_title: 'Swap for HNDM', buy_step3_desc: 'Connect to Jupiter, Meteora, or OpenSea. Paste contract address and swap USDT for HNDM.',
+                buy_step4_title: 'Stake & Earn', buy_step4_desc: 'Stake HNDM to earn BYT rewards, unlock premium tiers, and gain governance rights.',
+                swap_title: 'Swap & Trade HNDM', swap_link: 'More Options',
+                swap_jup: 'Best rates aggregator', swap_met: 'Liquidity pool DAMM V2', swap_os: 'Buy & swap any token', swap_uni: 'Cross-chain trading',
                 counter_visitors: 'Unique Visitors', counter_clients: 'Active Clients', counter_since: 'Since 2026', counter_verified: 'Verified on-chain',
                 footer_desc: 'Modern fashion for those who value simplicity, quality, and freedom.',
                 footer_shop: 'Shop', footer_women: 'Women', footer_men: 'Men', footer_accessories: 'Accessories',
-                footer_about: 'About', footer_atelier: 'Atelier', footer_token: 'Token', footer_editorial: 'Editorial', footer_stores: 'Stores',
+                footer_about: 'About', footer_atelier: 'Atelier', footer_token: 'Token', footer_editorial: 'Editorial',
                 footer_connect: 'Connect', footer_legal: 'Privacy · Terms · Cookies'
             },
             ru: {
-                nav_collection: 'Коллекция', nav_lookbook: 'Лукбук', nav_atelier: 'Ателье', nav_token: 'Токен', nav_shop: 'Магазин', nav_editorial: 'Журнал',
-                wallet_btn: 'Купить',
+                nav_collection: 'Коллекция', nav_lookbook: 'Лукбук', nav_token: 'Токен', nav_shop: 'Магазин', nav_fintech: 'Финтех', nav_editorial: 'Журнал',
+                wallet_btn: 'Купить HNDM',
                 hero_label: 'Осень — Зима 2026',
                 hero_title: 'Новый сезон.<br>Переосмыслен.',
                 hero_subtitle: 'Современные силуэты, натуральные текстуры и вневременной дизайн. Откройте коллекцию, которая движется с вами.',
                 hero_btn: 'Смотреть коллекцию',
+                hero_buy: 'Купить HNDM →',
                 collection_title: 'Коллекция', collection_link: 'Смотреть всё',
                 col_outerwear: 'Верхняя одежда', col_outerwear_desc: 'Пальто, куртки, тренчи',
                 col_knitwear: 'Трикотаж', col_knitwear_desc: 'Свитеры и кардиганы',
@@ -539,8 +684,7 @@
                 atelier_label: 'Ателье', atelier_title: 'Создано<br>с вниманием',
                 atelier_desc_1: 'Каждый стежок, каждый шов, каждая деталь — продуманы. Наше ателье сочетает традиционное мастерство с современной точностью.',
                 atelier_desc_2: 'Мы работаем с натуральными волокнами, экологичными материалами и приверженностью качеству, которое переживёт тренды.',
-                store_label: 'Посетите нас', store_title: 'Флагманские<br>магазины',
-                store_desc: 'Оцените коллекцию лично в наших флагманских магазинах.',
+                store_label: 'Посетите нас', store_title: 'Флагманские<br>магазины', store_desc: 'Оцените коллекцию лично в наших флагманских магазинах.',
                 token_title: 'Токен', token_link: 'Данные токена',
                 token_util_title: 'Доступ и владение',
                 token_util_desc: 'HNDM открывает эксклюзивные дропы, ранний доступ к коллекциям и право голоса в будущих кампаниях. Токен, который принадлежит гардеробу.',
@@ -549,12 +693,19 @@
                 token_gov_title: 'Формируй дом',
                 token_gov_desc: 'Голосуйте за направление коллекций, коллаборации и открытие магазинов. Держатели HNDM формируют будущее бренда.',
                 data_title: 'Данные токена', data_link: 'К токену',
-                data_price: 'Цена токена', data_fdv: 'Полная оценка', data_holders: 'Холдеры', data_liquidity: 'Ликвидность',
+                data_price: 'Цена HNDM', data_fdv: 'Рыночная капа', data_holders: 'Холдеры', data_liquidity: 'Ликвидность',
                 data_contract: 'Адрес контракта', data_pool: 'Открыть пул', data_opensea: 'Посмотреть на OpenSea',
+                buy_title: 'Как купить HNDM', buy_link: 'Открыть Финтех',
+                buy_step1_title: 'Установите кошелек', buy_step1_desc: 'Скачайте Phantom или Backpack для Solana. Храните SOL и USDT безопасно.',
+                buy_step2_title: 'Пополните кошелек', buy_step2_desc: 'Купите SOL или USDT на бирже и отправьте на адрес кошелька.',
+                buy_step3_title: 'Обменяйте на HNDM', buy_step3_desc: 'Подключитесь к Jupiter, Meteora или OpenSea. Вставьте адрес контракта и обменяйте USDT на HNDM.',
+                buy_step4_title: 'Стейкайте и зарабатывайте', buy_step4_desc: 'Стейкайте HNDM, чтобы получать награды в BYT, открывать премиум-уровни и участвовать в управлении.',
+                swap_title: 'Обмен и торговля HNDM', swap_link: 'Больше опций',
+                swap_jup: 'Лучший агрегатор курсов', swap_met: 'Пул ликвидности DAMM V2', swap_os: 'Купить и обменять любой токен', swap_uni: 'Кросс-чейн торговля',
                 counter_visitors: 'Уникальные посетители', counter_clients: 'Активные клиенты', counter_since: 'С 2026', counter_verified: 'Верифицировано в блокчейне',
                 footer_desc: 'Современная мода для тех, кто ценит простоту, качество и свободу.',
                 footer_shop: 'Магазин', footer_women: 'Женщинам', footer_men: 'Мужчинам', footer_accessories: 'Аксессуары',
-                footer_about: 'О нас', footer_atelier: 'Ателье', footer_token: 'Токен', footer_editorial: 'Журнал', footer_stores: 'Магазины',
+                footer_about: 'О нас', footer_atelier: 'Ателье', footer_token: 'Токен', footer_editorial: 'Журнал',
                 footer_connect: 'Связь', footer_legal: 'Приватность · Условия · Cookies'
             }
         };
@@ -579,10 +730,10 @@
         });
 
         document.getElementById('connectWallet').addEventListener('click', function() {
-            document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+            window.location.href = 'fintech.html';
         });
     </script>
     
     <script src="counter.js"></script>
 </body>
-                                </html>
+</html>

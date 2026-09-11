@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNDM — Editorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #FFFFFF; color: #000000; line-height: 1.5; }
+        .container { max-width: 1600px; margin: 0 auto; padding: 40px; }
+        
+        .header { position: fixed; top: 0; left: 0; width: 100%; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: #FFFFFF; border-bottom: 1px solid #EAEAEA; }
+        .logo img { height: 32px; width: auto; }
+        .nav a { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-left: 32px; opacity: 0.75; color: #000000; text-decoration: none; font-weight: 500; }
+        .nav a:hover { opacity: 1; }
+        .nav a.active { opacity: 1; border-bottom: 1px solid #000000; padding-bottom: 2px; }
+        
+        .page-hero { padding: 140px 0 60px; border-bottom: 1px solid #EAEAEA; margin-bottom: 60px; }
+        .page-title { font-size: 56px; font-weight: 300; letter-spacing: -1px; margin-bottom: 12px; }
+        .page-subtitle { font-size: 15px; opacity: 0.6; }
+        
+        .editorial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 100px; }
+        .editorial-feature { cursor: pointer; }
+        .editorial-feature img { width: 100%; height: 700px; object-fit: cover; display: block; margin-bottom: 24px; }
+        .editorial-feature .tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.5; font-weight: 500; }
+        .editorial-feature h2 { font-size: 32px; font-weight: 300; letter-spacing: -0.5px; margin: 12px 0 16px; line-height: 1.15; }
+        .editorial-feature p { font-size: 14px; line-height: 1.8; opacity: 0.7; margin-bottom: 20px; }
+        .editorial-feature .read { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; border-bottom: 1px solid #000000; padding-bottom: 2px; display: inline-block; }
+        
+        .editorial-small-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .editorial-small { cursor: pointer; }
+        .editorial-small img { width: 100%; height: 300px; object-fit: cover; display: block; margin-bottom: 16px; }
+        .editorial-small .tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.5; font-weight: 500; }
+        .editorial-small h3 { font-size: 18px; font-weight: 500; margin: 10px 0 8px; }
+        .editorial-small p { font-size: 13px; line-height: 1.7; opacity: 0.6; }
+        
+        .counter-section { padding: 60px 0; background: #000000; color: #FFFFFF; }
+        .counter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .counter-item { padding: 30px; }
+        .counter-number { font-size: 56px; font-weight: 300; }
+        .counter-label { font-size: 11px; text-transform: uppercase; letter-spacing: 4px; opacity: 0.5; margin-top: 12px; }
+        .counter-timestamp { font-size: 10px; opacity: 0.3; margin-top: 16px; font-family: 'Courier New', monospace; }
+        
+        .footer { padding: 60px 0 30px; background: #FFFFFF; border-top: 1px solid #EAEAEA; text-align: center; }
+        .footer p { font-size: 11px; opacity: 0.5; letter-spacing: 1px; }
+        .footer .disclaimer { font-size: 10px; opacity: 0.35; margin-top: 20px; line-height: 1.7; max-width: 900px; margin-left: auto; margin-right: auto; }
+        
+        @media (max-width: 992px) {
+            .editorial-grid { grid-template-columns: 1fr; gap: 40px; }
+            .editorial-small-grid { grid-template-columns: 1fr 1fr; }
+            .page-title { font-size: 40px; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            .header { padding: 12px 20px; flex-wrap: wrap; gap: 10px; }
+            .nav a { margin-left: 16px; font-size: 10px; }
+            .editorial-small-grid { grid-template-columns: 1fr; }
+            .editorial-feature img { height: 450px; }
+            .counter-grid { grid-template-columns: 1fr; gap: 20px; }
+            .counter-number { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><img src="hndm_logo.png" alt="HNDM" height="32"></a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="collection.html">Shop</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="editorial.html" class="active">Editorial</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-hero">
+            <h1 class="page-title">Editorial</h1>
+            <p class="page-subtitle">Stories, interviews, and ideas from the world of HNDM.</p>
+        </div>
+
+        <!-- Feature articles -->
+        <div class="editorial-grid">
+            <div class="editorial-feature">
+                <img src="hm-editorial-mono.jpg" alt="Editorial Mono" loading="lazy">
+                <div class="tag">Fashion</div>
+                <h2>Monochrome: A Study in Shadow</h2>
+                <p>Why black on black remains the most powerful statement in modern fashion — and how we translate it into every HNDM collection.</p>
+                <span class="read">Read the Story</span>
+            </div>
+            <div class="editorial-feature">
+                <img src="hm-atelier-detail.jpg" alt="Atelier Detail" loading="lazy">
+                <div class="tag">Craftsmanship</div>
+                <h2>The Atelier: Behind Every Seam</h2>
+                <p>An intimate look inside our atelier — where tradition meets precision, and every piece begins with a single thread.</p>
+                <span class="read">Read the Story</span>
+            </div>
+        </div>
+
+        <!-- Small grid -->
+        <div class="editorial-small-grid">
+            <div class="editorial-small">
+                <img src="hm-store-interior.jpg" alt="Store" loading="lazy">
+                <div class="tag">Stores</div>
+                <h3>Inside Our Flagship</h3>
+                <p>A visit to our newest flagship store, designed as a living space for the modern wardrobe.</p>
+            </div>
+            <div class="editorial-small">
+                <img src="hm-lookbook-01.jpg" alt="Lookbook" loading="lazy">
+                <div class="tag">Style</div>
+                <h3>Everyday Essentials</h3>
+                <p>Five pieces that form the foundation of a considered, effortless wardrobe.</p>
+            </div>
+            <div class="editorial-small">
+                <img src="hm-collection-knitwear.jpg" alt="Knitwear" loading="lazy">
+                <div class="tag">Materials</div>
+                <h3>The Story of Wool</h3>
+                <p>From fibre to finished garment — how natural materials shape the future of sustainable fashion.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="counter-section">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-number counter-visitors">119,800</div>
+                    <div class="counter-label">Unique Visitors</div>
+                    <div class="counter-timestamp counter-visitor-time">Since 2026</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number counter-clients">36</div>
+                    <div class="counter-label">Active Clients</div>
+                    <div class="counter-timestamp counter-client-time">Verified on-chain</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 HNDM. All rights reserved.</p>
+            <p class="disclaimer">
+                <strong>HNDM</strong> — Hash Network Data Mapper. Independent SPL token within the BYT ecosystem. Not affiliated with H&M (Hennes & Mauritz AB).
+            </p>
+        </div>
+    </footer>
+
+    <script src="counter.js"></script>
+</body>
+</html>

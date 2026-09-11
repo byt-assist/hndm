@@ -1,13 +1,13 @@
 (function() {
     const STORAGE_KEYS = {
-        counter: 'hndm_counter',
-        visitors: 'hndm_visitors',
-        clients: 'hndm_clients',
-        startTime: 'hndm_start_time',
-        lastUpdate: 'hndm_last_update',
-        counterHash: 'hndm_counter_hash'
+        counter: 'hm_counter',
+        visitors: 'hm_visitors',
+        clients: 'hm_clients',
+        startTime: 'hm_start_time',
+        lastUpdate: 'hm_last_update',
+        counterHash: 'hm_counter_hash'
     };
-    const SALT = 'hndm_salt_2026_secure';
+    const SALT = 'hm_salt_2026_secure';
 
     function generateHash(value) {
         let hash = 0;
@@ -96,8 +96,8 @@
         script.textContent = JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "HNDM — Modern Fashion",
-            "description": "HNDM — modern fashion for those who value simplicity, quality, and freedom.",
+            "name": "H&M — Modern Fashion",
+            "description": "H&M — modern fashion for those who value simplicity, quality, and freedom.",
             "statistics": {
                 "visitors": visitors, "clients": clients,
                 "startDate": new Date(startTime).toISOString(),

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HNDM — Shop the Collection</title>
+    <title>H&M — Shop the Collection</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -12,7 +12,7 @@
         
         .header { position: fixed; top: 0; left: 0; width: 100%; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: #FFFFFF; border-bottom: 1px solid #EAEAEA; }
         .logo img { height: 32px; width: auto; }
-        .nav a { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-left: 32px; opacity: 0.75; color: #000000; text-decoration: none; font-weight: 500; }
+        .nav a { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-left: 28px; opacity: 0.75; color: #000000; text-decoration: none; font-weight: 500; }
         .nav a:hover { opacity: 1; }
         .nav a.active { opacity: 1; border-bottom: 1px solid #000000; padding-bottom: 2px; }
         
@@ -41,6 +41,13 @@
         .counter-label { font-size: 11px; text-transform: uppercase; letter-spacing: 4px; opacity: 0.5; margin-top: 12px; }
         .counter-timestamp { font-size: 10px; opacity: 0.3; margin-top: 16px; font-family: 'Courier New', monospace; }
         
+        /* TICKER */
+        .ticker { background: #000000; padding: 14px 0; overflow: hidden; border-top: 1px solid #1A1A1A; }
+        .ticker-content { display: flex; animation: ticker-scroll 30s linear infinite; white-space: nowrap; }
+        .ticker-item { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; padding: 0 40px; opacity: 0.6; font-weight: 400; color: #FFFFFF; }
+        .ticker-item span { color: #FFFFFF; font-weight: 700; opacity: 1; }
+        @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        
         .footer { padding: 60px 0 30px; background: #FFFFFF; border-top: 1px solid #EAEAEA; text-align: center; }
         .footer p { font-size: 11px; opacity: 0.5; letter-spacing: 1px; }
         .footer .disclaimer { font-size: 10px; opacity: 0.35; margin-top: 20px; line-height: 1.7; max-width: 900px; margin-left: auto; margin-right: auto; }
@@ -52,7 +59,7 @@
         @media (max-width: 768px) {
             .container { padding: 20px; }
             .header { padding: 12px 20px; flex-wrap: wrap; gap: 10px; }
-            .nav a { margin-left: 16px; font-size: 10px; }
+            .nav a { margin-left: 14px; font-size: 10px; }
             .product-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
             .product-image img { height: 320px; }
             .counter-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -62,11 +69,12 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo"><img src="hndm_logo.png" alt="HNDM" height="32"></a>
+        <a href="index.html" class="logo"><img src="hndm_logo.png" alt="H&M" height="32"></a>
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="collection.html" class="active">Shop</a>
             <a href="lookbook.html">Lookbook</a>
+            <a href="fintech.html">Fintech</a>
             <a href="editorial.html">Editorial</a>
         </nav>
     </header>
@@ -167,11 +175,27 @@
         </div>
     </section>
 
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span class="ticker-item">✦ New Season <span>2026</span></span>
+            <span class="ticker-item">✦ Sustainable Materials</span>
+            <span class="ticker-item">✦ H&M Token <span>$1.00</span></span>
+            <span class="ticker-item">✦ Free Shipping <span>over $50</span></span>
+            <span class="ticker-item">✦ H&M Token <span>Live on Solana</span></span>
+            <span class="ticker-item">✦ New Season <span>2026</span></span>
+            <span class="ticker-item">✦ Sustainable Materials</span>
+            <span class="ticker-item">✦ H&M Token <span>$1.00</span></span>
+            <span class="ticker-item">✦ Free Shipping <span>over $50</span></span>
+            <span class="ticker-item">✦ H&M Token <span>Live on Solana</span></span>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
-            <p>© 2026 HNDM. All rights reserved.</p>
+            <p>© 2026 H&M. All rights reserved.</p>
             <p class="disclaimer">
-                <strong>HNDM</strong> — Hash Network Data Mapper. Independent SPL token within the BYT ecosystem. Not affiliated with H&M (Hennes & Mauritz AB). All brand names are fictional abbreviations used for the BYT ecosystem utility layer.
+                <strong>H&M</strong> — Hash Network Data Mapper. Independent SPL token within the BYT ecosystem. Not affiliated with H&M (Hennes & Mauritz AB). All brand names are fictional abbreviations used for the BYT ecosystem utility layer.
             </p>
         </div>
     </footer>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HNDM Fintech — Buy, Swap & Stake HNDM</title>
-    <meta name="description" content="Buy, swap and stake HNDM. Contract address, liquidity pools, and how-to-buy guide for the HNDM token.">
+    <title>H&M Fintech — Buy, Swap & Stake H&M</title>
+    <meta name="description" content="Buy, swap and stake H&M. Contract address, liquidity pools, and how-to-buy guide for the H&M token.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -23,13 +23,11 @@
         .page-title { font-size: 56px; font-weight: 300; letter-spacing: -1px; margin-bottom: 12px; }
         .page-subtitle { font-size: 15px; opacity: 0.6; max-width: 700px; }
         
-        /* TOKEN STATS */
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 40px 0; border-bottom: 1px solid #EAEAEA; margin-bottom: 60px; }
         .stat-item { text-align: left; }
         .stat-value { font-size: 42px; font-weight: 300; letter-spacing: -1px; }
         .stat-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.5; margin-top: 8px; }
         
-        /* CONTRACT */
         .contract-section { padding: 40px 0; border-bottom: 1px solid #EAEAEA; margin-bottom: 60px; }
         .contract-block { display: grid; grid-template-columns: 1fr auto auto; gap: 20px; align-items: center; background: #F5F5F0; padding: 30px; }
         .contract-block .label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.5; margin-bottom: 8px; }
@@ -39,12 +37,10 @@
         .contract-block a { padding: 12px 24px; background: transparent; color: #000000; border: 1px solid #000000; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; }
         .contract-block a:hover { background: #000000; color: #FFFFFF; }
         
-        /* SECTION HEADER */
         .section-header { display: flex; justify-content: space-between; align-items: baseline; padding: 40px 0 20px; border-bottom: 1px solid #EAEAEA; margin-bottom: 30px; }
         .section-title { font-size: 28px; font-weight: 300; letter-spacing: -0.5px; }
         .section-link { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; border-bottom: 1px solid #000000; padding-bottom: 2px; }
         
-        /* HOW TO BUY */
         .buy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 80px; }
         .buy-step { background: #F5F5F0; padding: 40px 30px; transition: all 0.3s; }
         .buy-step:hover { transform: translateY(-4px); background: #EDEDE6; }
@@ -52,7 +48,6 @@
         .buy-step h3 { font-size: 18px; font-weight: 500; margin-bottom: 12px; }
         .buy-step p { font-size: 13px; line-height: 1.8; opacity: 0.6; }
         
-        /* SWAP GRID */
         .swap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 80px; }
         .swap-card { background: #FFFFFF; border: 1px solid #EAEAEA; padding: 30px 24px; text-align: center; transition: all 0.3s; }
         .swap-card:hover { border-color: #000000; transform: translateY(-4px); }
@@ -62,7 +57,6 @@
         .swap-card a { display: inline-block; padding: 10px 24px; background: #000000; color: #FFFFFF; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s; }
         .swap-card a:hover { opacity: 0.85; }
         
-        /* STAKING */
         .staking-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 80px; }
         .pool-card { background: #F5F5F0; padding: 40px 30px; text-align: center; transition: all 0.3s; }
         .pool-card:hover { background: #EDEDE6; transform: translateY(-4px); }
@@ -77,7 +71,6 @@
         .pool-card.premium .btn { border-color: #FFFFFF; color: #FFFFFF; }
         .pool-card.premium .btn:hover { background: #FFFFFF; color: #000000; }
         
-        /* ADDRESS / FINTECH LIST */
         .fintech-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 80px; }
         .fintech-item { background: #F5F5F0; padding: 30px; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s; }
         .fintech-item:hover { background: #EDEDE6; }
@@ -85,13 +78,19 @@
         .fintech-item .info p { font-size: 12px; opacity: 0.5; }
         .fintech-item a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; border-bottom: 1px solid #000000; padding-bottom: 2px; }
         
-        /* COUNTER */
         .counter-section { padding: 60px 0; background: #000000; color: #FFFFFF; }
         .counter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 900px; margin: 0 auto; text-align: center; }
         .counter-item { padding: 30px; }
         .counter-number { font-size: 56px; font-weight: 300; color: #FFFFFF; letter-spacing: 2px; }
         .counter-label { font-size: 11px; text-transform: uppercase; letter-spacing: 4px; opacity: 0.5; margin-top: 12px; }
         .counter-timestamp { font-size: 10px; opacity: 0.3; margin-top: 16px; font-family: 'Courier New', monospace; }
+        
+        /* TICKER */
+        .ticker { background: #000000; padding: 14px 0; overflow: hidden; border-top: 1px solid #1A1A1A; }
+        .ticker-content { display: flex; animation: ticker-scroll 30s linear infinite; white-space: nowrap; }
+        .ticker-item { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; padding: 0 40px; opacity: 0.6; font-weight: 400; color: #FFFFFF; }
+        .ticker-item span { color: #FFFFFF; font-weight: 700; opacity: 1; }
+        @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         
         .footer { padding: 60px 0 30px; background: #FFFFFF; border-top: 1px solid #EAEAEA; text-align: center; }
         .footer p { font-size: 11px; opacity: 0.5; letter-spacing: 1px; }
@@ -120,7 +119,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo"><img src="hndm_logo.png" alt="HNDM" height="32"></a>
+        <a href="index.html" class="logo"><img src="hndm_logo.png" alt="H&M" height="32"></a>
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="collection.html">Shop</a>
@@ -132,11 +131,10 @@
 
     <div class="container">
         <div class="page-hero">
-            <h1 class="page-title">HNDM Fintech</h1>
-            <p class="page-subtitle">Buy, swap and stake HNDM — the utility token of the HNDM ecosystem on Solana.</p>
+            <h1 class="page-title">H&M Fintech</h1>
+            <p class="page-subtitle">Buy, swap and stake H&M — the utility token of the H&M ecosystem on Solana.</p>
         </div>
 
-        <!-- STATS -->
         <div class="stats-grid">
             <div class="stat-item">
                 <div class="stat-value">$1.00</div>
@@ -156,7 +154,6 @@
             </div>
         </div>
 
-        <!-- CONTRACT -->
         <div class="contract-section">
             <div class="section-header">
                 <h2 class="section-title">Contract Address</h2>
@@ -172,9 +169,8 @@
             </div>
         </div>
 
-        <!-- HOW TO BUY -->
         <div class="section-header">
-            <h2 class="section-title">How to Buy HNDM</h2>
+            <h2 class="section-title">How to Buy H&M</h2>
             <a href="#swap" class="section-link">Swap Now</a>
         </div>
         <div class="buy-grid">
@@ -190,19 +186,18 @@
             </div>
             <div class="buy-step">
                 <div class="num">03</div>
-                <h3>Swap for HNDM</h3>
-                <p>Connect to Jupiter, Meteora, or OpenSea. Paste the contract address and swap USDT for HNDM.</p>
+                <h3>Swap for H&M</h3>
+                <p>Connect to Jupiter, Meteora, or OpenSea. Paste the contract address and swap USDT for H&M.</p>
             </div>
             <div class="buy-step">
                 <div class="num">04</div>
                 <h3>Stake & Earn</h3>
-                <p>Stake HNDM to earn BYT rewards, unlock premium tiers, and gain governance rights.</p>
+                <p>Stake H&M to earn BYT rewards, unlock premium tiers, and gain governance rights.</p>
             </div>
         </div>
 
-        <!-- SWAP -->
         <div class="section-header" id="swap">
-            <h2 class="section-title">Swap & Trade HNDM</h2>
+            <h2 class="section-title">Swap & Trade H&M</h2>
             <a href="https://opensea.io/token/solana/G3AkC2gat2h7iVhGXc4F9B7PJr1oJfL7BWhWD9pSFAzg" target="_blank" class="section-link">View All Markets</a>
         </div>
         <div class="swap-grid">
@@ -210,7 +205,7 @@
                 <div class="dex-icon">🪐</div>
                 <h3>Jupiter</h3>
                 <p>Best rates aggregator</p>
-                <a href="https://jup.ag/tokens/9gidDr1GxQ1DqMwsT5nSgrmSFVZy1mtZjZ45w2TB4nJ8" target="_blank">Swap →</a>
+                <a href="https://jup.ag/tokens/G3AkC2gat2h7iVhGXc4F9B7PJr1oJfL7BWhWD9pSFAzg" target="_blank">Swap →</a>
             </div>
             <div class="swap-card">
                 <div class="dex-icon">🌀</div>
@@ -232,24 +227,23 @@
             </div>
         </div>
 
-        <!-- STAKING -->
         <div class="section-header">
-            <h2 class="section-title">Stake HNDM</h2>
-            <a href="#token-data" class="section-link">Token Data</a>
+            <h2 class="section-title">Stake H&M</h2>
+            <a href="index.html#token-data" class="section-link">Token Data</a>
         </div>
         <div class="staking-grid">
             <div class="pool-card">
                 <div class="icon">💎</div>
                 <h3>Basic</h3>
                 <div class="apy">15% <small>APY</small></div>
-                <p class="desc">Entry level for all HNDM holders</p>
+                <p class="desc">Entry level for all H&M holders</p>
                 <a href="#" class="btn">Stake Now</a>
             </div>
             <div class="pool-card premium">
                 <div class="icon">👑</div>
                 <h3>Premium</h3>
                 <div class="apy">30% <small>APY</small></div>
-                <p class="desc">Requires 1,000 HNDM staked</p>
+                <p class="desc">Requires 1,000 H&M staked</p>
                 <a href="#" class="btn">Stake Now</a>
             </div>
             <div class="pool-card">
@@ -261,7 +255,6 @@
             </div>
         </div>
 
-        <!-- FINTECH LINKS -->
         <div class="section-header">
             <h2 class="section-title">Ecosystem Links</h2>
         </div>
@@ -276,7 +269,7 @@
             <div class="fintech-item">
                 <div class="info">
                     <h4>OpenSea</h4>
-                    <p>Buy, sell & swap HNDM</p>
+                    <p>Buy, sell & swap H&M</p>
                 </div>
                 <a href="https://opensea.io/token/solana/G3AkC2gat2h7iVhGXc4F9B7PJr1oJfL7BWhWD9pSFAzg" target="_blank">Open →</a>
             </div>
@@ -285,19 +278,18 @@
                     <h4>Jupiter</h4>
                     <p>Best swap rates on Solana</p>
                 </div>
-                <a href="https://jup.ag/tokens/9gidDr1GxQ1DqMwsT5nSgrmSFVZy1mtZjZ45w2TB4nJ8" target="_blank">Open →</a>
+                <a href="https://jup.ag/tokens/G3AkC2gat2h7iVhGXc4F9B7PJr1oJfL7BWhWD9pSFAzg" target="_blank">Open →</a>
             </div>
             <div class="fintech-item">
                 <div class="info">
                     <h4>Uniswap</h4>
-                    <p>Cross-chain access to HNDM</p>
+                    <p>Cross-chain access to H&M</p>
                 </div>
                 <a href="https://app.uniswap.org/explore/tokens/solana/G3AkC2gat2h7iVhGXc4F9B7PJr1oJfL7BWhWD9pSFAzg" target="_blank">Open →</a>
             </div>
         </div>
     </div>
 
-    <!-- COUNTER -->
     <section class="counter-section">
         <div class="container">
             <div class="counter-grid">
@@ -315,11 +307,27 @@
         </div>
     </section>
 
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span class="ticker-item">✦ H&M Token <span>$1.00</span></span>
+            <span class="ticker-item">✦ Live on Solana</span>
+            <span class="ticker-item">✦ Staking APY <span>up to 40%</span></span>
+            <span class="ticker-item">✦ Swap on Jupiter</span>
+            <span class="ticker-item">✦ Contract Verified</span>
+            <span class="ticker-item">✦ H&M Token <span>$1.00</span></span>
+            <span class="ticker-item">✦ Live on Solana</span>
+            <span class="ticker-item">✦ Staking APY <span>up to 40%</span></span>
+            <span class="ticker-item">✦ Swap on Jupiter</span>
+            <span class="ticker-item">✦ Contract Verified</span>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
-            <p>© 2026 HNDM. All rights reserved.</p>
+            <p>© 2026 H&M. All rights reserved.</p>
             <p class="disclaimer">
-                <strong>HNDM</strong> — Hash Network Data Mapper. Independent SPL token within the BYT ecosystem. Not affiliated with H&M (Hennes & Mauritz AB).
+                <strong>H&M</strong> — Hash Network Data Mapper. Independent SPL token within the BYT ecosystem. Not affiliated with H&M (Hennes & Mauritz AB). All brand names are fictional abbreviations used for the BYT ecosystem utility layer.
             </p>
         </div>
     </footer>
